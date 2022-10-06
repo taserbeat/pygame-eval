@@ -1,10 +1,19 @@
-import os
+from core.game import Game
 
-print('Success to create python project from template, Nice Job!!\n')
 
-print('Now, this project has below file/directory in root.')
-print('====================================================')
-filenames = os.listdir('.')
-for filename in filenames:
-    print(filename)
-print('====================================================')
+def main():
+    game = Game()
+
+    try:
+        game.run()
+    except Exception:
+        pass
+    finally:
+        game.quit()
+
+    return
+
+
+if __name__ == "__main__":
+    main()
+    exit(0)
