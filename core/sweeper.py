@@ -5,12 +5,12 @@ import typing as t
 class Sweeper:
     def __init__(
         self,
-        x_min: int = 100,
-        y_min: int = 100,
+        x_min: int = 200,
+        y_min: int = 300,
         width: int = 50,
         height: int = 10,
-        x_velocity: int = 1,
-        y_velocity: int = 1,
+        x_velocity: int = 2,
+        y_velocity: int = 2,
         color: t.Tuple[int, int, int] = (255, 0, 0)
     ) -> None:
         self.x_min = x_min

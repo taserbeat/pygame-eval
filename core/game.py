@@ -13,7 +13,7 @@ class Game:
     def __init__(self) -> None:
         self.is_loop = False
 
-        self.screen = pygame.display.set_mode((600, 600))
+        self.screen = pygame.display.set_mode((400, 400))
         pygame.display.set_caption("サンプル")
 
         self.ball = Ball()

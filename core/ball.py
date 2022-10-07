@@ -8,8 +8,8 @@ class Ball:
         x: float = 200,
         y: float = 100,
         radius: float = 10,
-        x_velocity=1,
-        y_velocity=1,
+        x_velocity=2,
+        y_velocity=2,
         color: t.Tuple[int, int, int] = (0, 0, 255)
     ) -> None:
         self.x = x
