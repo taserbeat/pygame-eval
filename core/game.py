@@ -1,6 +1,8 @@
 import pygame
 
 from core.color import RGBColor
+from core.ball import Ball
+from core.sweeper import Sweeper
 
 
 class Game:
@@ -13,6 +15,10 @@ class Game:
 
         self.screen = pygame.display.set_mode((600, 600))
         pygame.display.set_caption("サンプル")
+
+        self.ball = Ball()
+        self.sweeper = Sweeper()
+
         return
 
     def run(self):
@@ -23,8 +29,12 @@ class Game:
         return
 
     def update(self):
+        # https://qiita.com/ProOJI/items/56927105ceed4dd66ea3
         while self.is_loop:
             self.screen.fill(RGBColor.BLACK)
+
+            self.ball.update(self.screen)
+            self.sweeper.update(self.screen)
 
             pygame.display.update()
 
