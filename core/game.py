@@ -19,6 +19,8 @@ class Game:
         self.ball = Ball()
         self.sweeper = Sweeper()
 
+        self.clock = pygame.time.Clock()
+
         return
 
     def run(self):
@@ -31,6 +33,8 @@ class Game:
     def update(self):
         # https://qiita.com/ProOJI/items/56927105ceed4dd66ea3
         while self.is_loop:
+            self.clock.tick(60)
+
             self.screen.fill(RGBColor.BLACK)
 
             self.ball.update(self.screen)
